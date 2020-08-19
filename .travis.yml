@@ -4,8 +4,8 @@ script:
   - cat /sys/module/overlay/parameters/metacopy
   - cat /sys/module/overlay/parameters/redirect_always_follow
   - uname -a 
-  - cat /etc/group
-  - whoami
+  - cat /etc/passwd
+  - cat /etc/fstab
   - sudo docker run -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
   - sudo docker run --privileged -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
 
