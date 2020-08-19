@@ -2,7 +2,7 @@ arch: ppc64le
 
 script:
   - cat /sys/module/overlay/parameters/metacopy
-  - sudo echo Y > /sys/module/overlay/parameters/redirect_always_follow
+  - sudo echo N > /sys/module/overlay/parameters/redirect_always_follow
   - cat /sys/module/overlay/parameters/redirect_always_follow
   - echo "Running"
   - uname -a 
