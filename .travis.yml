@@ -4,6 +4,7 @@ script:
   - cat /sys/module/overlay/parameters/metacopy
   - sudo echo Y > /sys/module/overlay/parameters/redirect_always_follow
   - cat /sys/module/overlay/parameters/redirect_always_follow
+  - echo "Running"
   - uname -a 
   - df -Th
   - sudo docker run -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
