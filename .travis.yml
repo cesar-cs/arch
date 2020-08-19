@@ -2,9 +2,9 @@ arch: ppc64le
 
 script:
   - cat /sys/module/overlay/parameters/metacopy
-  - sudo echo N > /sys/module/overlay/parameters/redirect_always_follow
   - cat /sys/module/overlay/parameters/redirect_always_follow
   - echo "Running"
+  - cat ./linux-5.0/.config
   - uname -a 
   - df -Th
   - sudo docker run -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
