@@ -1,16 +1,14 @@
 arch: ppc64le
 
 script:
-  - cat /sys/module/overlay/parameters/metacopy
-  - cat /sys/module/overlay/parameters/redirect_always_follow
-  - echo "Running"
   - ls -lah /proc/
   - uname -a 
   - df -Th
-  - psql -c 'create database name;' -U travis;
-  - psql -c 'create database email;' -U postgres;
-  - sudo psql -c 'create database login;' -U postgres;
-  - sudo docker run -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
-  - sudo docker run --privileged -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
+  # - psql -c 'create database name;' -U travis;
+  # - psql -c 'create database email;' -U postgres;
+  # - sudo psql -c 'create database login;' -U postgres;
+  # - sudo docker run -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
+  # - sudo docker run --privileged -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
+    - docker build -t test:docker  
   
 
