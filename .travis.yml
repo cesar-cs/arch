@@ -2,4 +2,4 @@ arch: ppc64le
 
 script:
   - uname -a
-  - docker build -t docker:test
+  - docker build -t docker:test .
