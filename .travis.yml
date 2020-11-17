@@ -1,12 +1,12 @@
 arch: ppc64le
 
 
-matrix:
-  include:
-   - arch: ppc64le
-     dist: bionic
-   - arch: ppc64le
-     dist: focal
+# matrix:
+#   include:
+#    - arch: ppc64le
+#      dist: bionic
+#    - arch: ppc64le
+#      dist: focal
 
 script:
   - uname -a
