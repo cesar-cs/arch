@@ -1,4 +1,6 @@
 arch: ppc64le
+dist: xenial
+group: edge
 
 services:
   - postgresql
