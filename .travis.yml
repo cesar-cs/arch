@@ -1,8 +1,12 @@
 arch: ppc64le
-dist: 
-  - xenial
-  - bionic
-  - focal
+jobs:
+  include:
+    - os: linux
+      dist: xenial
+    - os: linux
+      dist: bionic
+    - linux: linux
+      dist: focal
 
 script:
   - echo $HOSTNAME
