@@ -12,4 +12,5 @@ script:
   - echo $HOSTNAME
   - curl icanhazip.com
   - cat /etc/hosts
+  - sudo docker run -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
  
