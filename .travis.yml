@@ -1,13 +1,12 @@
-arch: ppc64le
 
 jobs:
   include:
-    - os: linux
-      osx_image: bionic
-    - os: linux
-      osx_image: xenial
-    - os: osx
-      osx_image: focal
+    - arch: ppc64le
+      dist: bionic
+    - arch: ppc64le
+      dist: xenial      
+    - arch: ppc64le
+      dist: focal
 
 services:
   - postgresql
