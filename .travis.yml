@@ -1,27 +1,17 @@
 arch: ppc64le
-dist: bionic
+
+jobs:
+  include:
+    - os: linux
+      osx_image: bionic
+    - os: linux
+      osx_image: xenial
+    - os: osx
+      osx_image: focal
 
 services:
   - postgresql
 
 script:
-#   - cat /sys/module/overlay/parameters/metacopy
-#   - cat /sys/module/overlay/parameters/redirect_always_follow
-#   - ls -lah /proc/
   - uname -a 
-  - sudo cat etc/netplan/50-cloud-init.yaml
-  - sudo cat /etc/cloud/cloud.cfg
-  - sudo cat /etc/netplan/10-lxc.yaml
-#   - ls -lah /etc/cloud/templates
-#   - sudo cat /etc/cloud/templates/hosts.tmpl
-  - cat /etc/hosts
-#   - df -Th
-  - sudo cat /etc/postgresql/9.6/main/pg_hba.conf
-  - sudo cat /etc/postgresql/9.6/main/postgresql.conf
-  - sudo cat /etc/postgresql/10/main/pg_hba.conf
-  - sudo cat /etc/postgresql/10/main/postgresql.conf
-  - psql -c 'create database name;' -U travis;
-  - psql -c 'create database email;' -U postgres;
-  - sudo psql -c 'create database login;' -U postgres;
-#   - sudo docker run -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
-#   - sudo docker run --privileged -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
+
