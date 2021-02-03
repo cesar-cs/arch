@@ -1,5 +1,5 @@
-arch: ppc64le
-dist: bionic
+os: freebsd
+
 
 # services:
 #   - postgresql
@@ -8,7 +8,7 @@ script:
 #   - cat /sys/module/overlay/parameters/metacopy
 #   - cat /sys/module/overlay/parameters/redirect_always_follow
 #   - ls -lah /proc/
-#   - uname -a 
+  - uname -a 
 #   - sudo cat etc/netplan/50-cloud-init.yaml
 #   - sudo cat /etc/cloud/cloud.cfg
 #   - sudo cat /etc/netplan/10-lxc.yaml
@@ -23,6 +23,6 @@ script:
 #   - psql -c 'create database name;' -U travis;
 #   - psql -c 'create database email;' -U postgres;
 #   - sudo psql -c 'create database login;' -U postgres;
-  - docker run -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
-  - docker run -t ubuntu:20.04 bash -c 'apt update -y && apt install -y wget'
+#   - docker run -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
+#   - docker run -t ubuntu:20.04 bash -c 'apt update -y && apt install -y wget'
 #   - sudo docker run --privileged -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
