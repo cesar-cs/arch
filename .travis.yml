@@ -1,4 +1,6 @@
-os: freebsd
+# os: freebsd
+arch: 
+  - ppc64le
 
 
 # services:
@@ -9,6 +11,8 @@ script:
 #   - cat /sys/module/overlay/parameters/redirect_always_follow
 #   - ls -lah /proc/
   - uname -a 
+  - lsb_release -a
+  
 #   - sudo cat etc/netplan/50-cloud-init.yaml
 #   - sudo cat /etc/cloud/cloud.cfg
 #   - sudo cat /etc/netplan/10-lxc.yaml
