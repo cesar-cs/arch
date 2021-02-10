@@ -1,7 +1,7 @@
 # os: freebsd
 arch: 
   - ppc64le
-
+dist: trusty
 
 # services:
 #   - postgresql
