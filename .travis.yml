@@ -1,7 +1,12 @@
 # os: freebsd
-arch: 
-  - ppc64le
+os: linux
+language: scala
 dist: trusty
+sudo: false
+
+scala: 2.13.4
+jdk: openjdk15
+arch: ppc64le
 
 # services:
 #   - postgresql
