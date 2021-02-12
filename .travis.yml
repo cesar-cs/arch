@@ -1,8 +1,12 @@
-arch: ppc64le
 dist: bionic
 
-services:
-  - postgresql
+# services:
+#   - postgresql
+
+ cache:
+    directories:
+     - /home/travis/
+
 
 script:
 #   - cat /sys/module/overlay/parameters/metacopy
@@ -23,5 +27,5 @@ script:
 #   - psql -c 'create database name;' -U travis;
 #   - psql -c 'create database email;' -U postgres;
 #   - sudo psql -c 'create database login;' -U postgres;
-  - sudo docker run -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
-  - sudo docker run --privileged -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
+#   - sudo docker run -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
+#   - sudo docker run --privileged -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
