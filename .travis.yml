@@ -3,9 +3,9 @@ dist: bionic
 # services:
 #   - postgresql
 
- cache:
-    directories:
-     - /home/travis/
+cache:
+  directories:
+    - /home/travis/
 
 
 script:
