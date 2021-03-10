@@ -1,5 +1,4 @@
 os: linux
-language: generic
 dist: bionic
 arch: ppc64le
 
