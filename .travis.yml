@@ -1,6 +1,16 @@
+language: ruby
 os: linux
-dist: xenial
 arch: ppc64le
+dist: xenial
+virt: lxd
+addons:
+  postgresql: 9.6
+rvm: 2.6.3
 
-script:
-  - uname -a
+cache: bundler
+jobs:
+  include:
+    - stage: "rspec"
+      script: bundle exec rspec
+      before_script:
+        - "bundle exec rake db:create db:migrate"
