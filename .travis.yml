@@ -5,4 +5,4 @@ dist: bionic
 
 script:
   - uname -a
-  - curl ifconfig.me/ip
+  - curl icanhazip.com
