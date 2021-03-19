@@ -19,4 +19,5 @@ script:
   - java -version
   - update-java-alternatives -l
   - sudo update-java-alternatives -s "$PACKAGE"*
+  - java -version
 
