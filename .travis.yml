@@ -16,4 +16,5 @@ script:
   - java -version
   - sudo apt-get -y install adoptopenjdk-8-hotspot
   - java -version
+  - update-java-alternatives -l
 
