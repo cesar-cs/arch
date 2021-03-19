@@ -9,7 +9,7 @@ language: java
 
 script:
   - uname -a
-  - export JAVA_VERSION=9
+  - export JAVA_VERSION=10
   - export PACKAGE="adoptopenjdk-${JAVA_VERSION}-hotspot"
   - wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
   - sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
