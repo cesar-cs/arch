@@ -1,18 +1,18 @@
 
 jobs:
   include:
+    - arch: arm64
+    - arch: ppc64le      
     - arch: s390x
-      dist: bionic
-    - arch: s390x
-      dist: xenial      
-    - arch: s390x
-      dist: focal
-
       
-
-services:
-  - postgresql
+language: java
 
 script:
-  - uname -a 
+  - uname -a
+  - export JAVA_VERSION=8
+  - wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+  - sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+  - apt-get update -yqq
+  - apt-get -yqq --no-install-suggests --no-install-recommends install adoptopenjdk-${JAVA_VERSION}-hotspot
+  - java -version
 
