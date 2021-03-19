@@ -14,5 +14,5 @@ script:
   - sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
   - sudo apt-get update -yqq
   - java -version
-  - sudo apt-get -y --no-install-suggests --no-install-recommends install adoptopenjdk-9-hotspot
+  - sudo apt-get -y --no-install-suggests --no-install-recommends install adoptopenjdk-8-hotspot
 
