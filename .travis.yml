@@ -1,15 +1,14 @@
-language: ruby
-os: linux
-arch: arm64
-dist: xenial
-virt: lxd
-addons:
-  postgresql: 9.6
-rvm: 2.6.3
-cache: bundler
-jobs:
-  include:
-    - stage: "rspec"
-      script: bundle exec rspec
-      before_script:
-        - "bundle exec rake db:create db:migrate"
+arch:
+ - ppc64le
+ - s390x
+ - arm64
+ 
+language: java
+sudo: false
+
+jdk:
+  - openjdk8
+  - openjdk15
+
+script:
+  - java -version
