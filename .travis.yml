@@ -1,14 +1,5 @@
-arch:
- - ppc64le
- - s390x
- - arm64
- 
-language: java
-sudo: false
-
-jdk:
-  - openjdk8
-  - openjdk15
+arch: arm64-graviton2 
 
 script:
-  - java -version
+  - uname -a
+  - arch
