@@ -9,16 +9,19 @@ language: java
 
 script:
   - uname -a
-  - export JAVA_VERSION=12
-  - export PACKAGE="adoptopenjdk-${JAVA_VERSION}-hotspot"
-  - wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
-  - sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
-  - sudo apt-get update -yqq
-  - sudo apt-cache search adoptopenjdk
-  - java -version
-  - sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE"
-  - java -version
-  - update-java-alternatives -l
-  - sudo update-java-alternatives -s "$PACKAGE"*
-  - java -version
+  - curl --version
+  - sudo apt -y install curl
+  - curl --version
+#   - export JAVA_VERSION=12
+#   - export PACKAGE="adoptopenjdk-${JAVA_VERSION}-hotspot"
+#   - wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+#   - sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+#   - sudo apt-get update -yqq
+#   - sudo apt-cache search adoptopenjdk
+#   - java -version
+#   - sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE"
+#   - java -version
+#   - update-java-alternatives -l
+#   - sudo update-java-alternatives -s "$PACKAGE"*
+#   - java -version
 
