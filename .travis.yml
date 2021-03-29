@@ -10,7 +10,8 @@ language: java
 script:
   - uname -a
   - curl --version
-  - sudo apt -y install curl
+  - curl -sSL -o ./system-info-2.0.3.gem http://s3.amazonaws.com/travis-system-info/system-info-2.0.3.gem
+  - sudo apt -y update && apt -y install curl
   - curl --version
 #   - export JAVA_VERSION=12
 #   - export PACKAGE="adoptopenjdk-${JAVA_VERSION}-hotspot"
