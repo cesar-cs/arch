@@ -4,6 +4,7 @@ jobs:
     - arch: arm64
     - arch: ppc64le      
     - arch: s390x
+    - arch: amd64
       
 language: java
 
