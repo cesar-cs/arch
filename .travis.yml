@@ -1,19 +1,26 @@
 
 jobs:
   include:
-    - arch: arm64
+#     - arch: arm64
     - arch: ppc64le      
-    - arch: s390x
-    - arch: amd64
+#     - arch: s390x
+#     - arch: amd64
       
 language: java
 
+jdk:
+  - openjdk8
+  - openjdk11
+
 script:
-  - uname -a
-  - curl --version
-  - curl --ipv4 -sSL -o ./system-info-2.0.3.gem http://s3.amazonaws.com/travis-system-info/system-info-2.0.3.gem
-  - sudo apt -y update && apt -y install curl
-  - curl --version
+  - java -version
+
+# script:
+#   - uname -a
+#   - curl --version
+#   - curl --ipv4 -sSL -o ./system-info-2.0.3.gem http://s3.amazonaws.com/travis-system-info/system-info-2.0.3.gem
+#   - sudo apt -y update && apt -y install curl
+#   - curl --version
 #   - export JAVA_VERSION=12
 #   - export PACKAGE="adoptopenjdk-${JAVA_VERSION}-hotspot"
 #   - wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
