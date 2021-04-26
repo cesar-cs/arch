@@ -1,13 +1,11 @@
 arch: ppc64le      
 group: edge
+dist: bionic
 language: java
 
 before_install:
   - java -version
-jdk:
-  - openjdk8
-  - openjdk11
-  - openjdk12
 
 script:
-  - java -version
+  - sudo apt list --installed 
+  - dpkg -l
