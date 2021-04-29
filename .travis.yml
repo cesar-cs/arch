@@ -1,31 +1,54 @@
-dist: bionic
 
-# services:
-#   - postgresql
+language: minimal
+dist: xenial
 
-cache:
-  directories:
-    - /home/travis/
+install:
+- git clone --branch=lxd-templates-fixjdk "https://github.com/travis-ci/packer-templates.git"
+- pushd packer-templates
 
+env:
+  global:
+    - BUILDER="lxd"
+    - AWS_ACCESS_KEY_ID=$LXC_AWS_ACCESS_KEY_ID
+    - AWS_SECRET_ACCESS_KEY=$LXC_AWS_SECRET_ACCESS_KEY
+    - JOB_BOARD_IMAGES_URL=$LXC_JOB_BOARD_IMAGES_URL
+
+  jobs:
+      #- TEMPLATE="ubuntu-16.04-minimal" ARCH="arm64" BUILDER_HOST=$BUILDER_arm64
+    # - TEMPLATE="ubuntu-18.04-minimal" ARCH="arm64" BUILDER_HOST=$BUILDER_arm64
+    # - TEMPLATE="ubuntu-20.04-minimal" ARCH="arm64" BUILDER_HOST=$BUILDER_arm64
+    # #- TEMPLATE="ubuntu-16.04-full" ARCH="arm64" BUILDER_HOST=$BUILDER_arm64
+    # - TEMPLATE="ubuntu-18.04-full" ARCH="arm64" BUILDER_HOST=$BUILDER_arm64
+    # - TEMPLATE="ubuntu-20.04-full" ARCH="arm64" BUILDER_HOST=$BUILDER_arm64
+    # - TEMPLATE="ubuntu-16.04-generic" ARCH="arm64" BUILDER_HOST=$BUILDER_arm64
+    # - TEMPLATE="ubuntu-18.04-generic" ARCH="arm64" BUILDER_HOST=$BUILDER_arm64
+    # - TEMPLATE="ubuntu-20.04-generic" ARCH="arm64" BUILDER_HOST=$BUILDER_arm64
+    # - TEMPLATE="ubuntu-16.04-minimal" ARCH="ppc64le" BUILDER_HOST=$BUILDER_ppc64le
+    #- TEMPLATE="ubuntu-18.04-minimal" ARCH="ppc64le" BUILDER_HOST=$BUILDER_ppc64le
+    #- TEMPLATE="ubuntu-20.04-minimal" ARCH="ppc64le" BUILDER_HOST=$BUILDER_ppc64le
+    # - TEMPLATE="ubuntu-16.04-generic" ARCH="ppc64le" BUILDER_HOST=$BUILDER_ppc64le
+    #- TEMPLATE="ubuntu-18.04-generic" ARCH="ppc64le" BUILDER_HOST=$BUILDER_ppc64le
+#     - TEMPLATE="ubuntu-20.04-generic" ARCH="ppc64le" BUILDER_HOST=$BUILDER_ppc64le
+#     - TEMPLATE="ubuntu-16.04-full" ARCH="ppc64le" BUILDER_HOST=$BUILDER_ppc64le
+#     - TEMPLATE="ubuntu-18.04-full" ARCH="ppc64le" BUILDER_HOST=$BUILDER_ppc64le
+    - TEMPLATE="ubuntu-20.04-full" ARCH="ppc64le" BUILDER_HOST=$BUILDER_ppc64le
+      #- TEMPLATE="ubuntu-16.04-generic" ARCH="s390x" BUILDER_HOST=$BUILDER_s390x
+      #- TEMPLATE="ubuntu-18.04-generic" ARCH="s390x" BUILDER_HOST=$BUILDER_s390x
+      #- TEMPLATE="ubuntu-16.04-full" ARCH="s390x" BUILDER_HOST=$BUILDER_s390x
+      #- TEMPLATE="ubuntu-18.04-full" ARCH="s390x" BUILDER_HOST=$BUILDER_s390x
+    # - TEMPLATE="ubuntu-16.04-ruby" ARCH="arm64" BUILDER_HOST=$BUILDER_arm64
+    # - TEMPLATE="ubuntu-18.04-ruby" ARCH="arm64" BUILDER_HOST=$BUILDER_arm64
+
+before_script:
+- |
+  echo '
+  Host *
+    StrictHostKeyChecking no
+    UserKnownHostsFile=/dev/null
+    LogLevel ERROR
+  '>> ~/.ssh/config
+- eval $BUILDER_KEY
+- if [[ $ARCH == "ppc64le" ]]; then echo $BUILDER_KEY_PPC | base64 --decode > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa && export BUILDER_USER=$BUILDER_USER_PPC; fi
 
 script:
-#   - cat /sys/module/overlay/parameters/metacopy
-#   - cat /sys/module/overlay/parameters/redirect_always_follow
-#   - ls -lah /proc/
-  - uname -a 
-#   - sudo cat etc/netplan/50-cloud-init.yaml
-#   - sudo cat /etc/cloud/cloud.cfg
-#   - sudo cat /etc/netplan/10-lxc.yaml
-# #   - ls -lah /etc/cloud/templates
-# #   - sudo cat /etc/cloud/templates/hosts.tmpl
-#   - cat /etc/hosts
-# #   - df -Th
-#   - sudo cat /etc/postgresql/9.6/main/pg_hba.conf
-#   - sudo cat /etc/postgresql/9.6/main/postgresql.conf
-#   - sudo cat /etc/postgresql/10/main/pg_hba.conf
-#   - sudo cat /etc/postgresql/10/main/postgresql.conf
-#   - psql -c 'create database name;' -U travis;
-#   - psql -c 'create database email;' -U postgres;
-#   - sudo psql -c 'create database login;' -U postgres;
-#   - sudo docker run -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
-#   - sudo docker run --privileged -t ubuntu:18.04 bash -c 'apt update -y && apt install -y wget'
+- make $TEMPLATE
