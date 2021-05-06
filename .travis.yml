@@ -4,12 +4,14 @@ jobs:
       dist: xenial
     - arch: ppc64le
       dist: bionic
-      group: test
     - arch: ppc64le
       dist: focal
+      group: test
+   
 
 language: java
 jdk: openjdk8
 
 script:
-  - mvn --version
+  - sudo apt list --installed
+  - dpkg -l
