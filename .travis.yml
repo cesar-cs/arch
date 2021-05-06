@@ -4,6 +4,7 @@ jobs:
       dist: xenial
     - arch: ppc64le
       dist: bionic
+      group: test
     - arch: ppc64le
       dist: focal
 
