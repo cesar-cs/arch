@@ -1,12 +1,20 @@
-os: linux
-dist: focal
-group: edge
-arch: arm64-graviton2
-virt: vm
+jobs:
+  include:
+    - arch: arm64
+      os: linux
+      dist: focal
+      group: edge
+      arch: arm64-graviton2
+      virt: vm
+    - arch: arm64
+      dist: bionic
+    - arch: amd64
+      dist: xenial
+      
 script:
   - clang --version
   - uname -a
-  - cat proc/cpuinfo
+  - cat /proc/cpuinfo
   - curl icanhazip.com
 
 
