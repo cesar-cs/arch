@@ -1,11 +1,12 @@
-arch: ppc64le      
+os: linux
+dist: focal
 group: edge
-dist: xenial
-language: java
-
-before_install:
-  - java -version
-
+arch: arm64-graviton2
 script:
-  - sudo apt list --installed 
-  - dpkg -l
+  - clang --version
+  - uname -a
+  - cat /etc/proc/cpuinfo
+
+
+  
+  
