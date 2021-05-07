@@ -6,7 +6,7 @@ virt: lxd
 script:
   - clang --version
   - uname -a
-  - cat /etc/proc/cpuinfo
+  - cat proc/cpuinfo
 
 
   
