@@ -2,13 +2,13 @@ jobs:
   include:
     - arch: ppc64le
       dist: xenial
-      group: test
+      group: stable
     - arch: ppc64le
       dist: bionic
-      group: test
+      group: stable
     - arch: ppc64le
       dist: focal
-      group: test
+      group: stable
    
 
 language: java
