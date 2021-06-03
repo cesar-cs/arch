@@ -1,11 +1,15 @@
-arch: s390x      
+language: ruby
 
+cache:
+  bundler: true
+
+services:
+  - redis
+
+dist: trusty
 
 before_install:
-  - java -version
-
-script:
-  - dig +short myip.opendns.com @resolver1.opendns.com
-  - curl https://icanhazip.com
-  - sudo apt list --installed 
-  - dpkg -l
+  - python --version
+  - python3 --version
+  - pip install awscli --user || pip3 install awscli --user
+ 
