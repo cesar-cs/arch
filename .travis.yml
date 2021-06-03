@@ -11,5 +11,5 @@ dist: trusty
 before_install:
   - python --version
   - python3 --version
-  - pip install awscli --user || pip3 install awscli --user
- 
+#   - pip install awscli --user
+  - python3 -m pip install awscli
