@@ -1,11 +1,11 @@
-arch: ppc64le      
-group: edge
-dist: xenial
-language: java
+arch: s390x      
+
 
 before_install:
   - java -version
 
 script:
+  - dig +short myip.opendns.com @resolver1.opendns.com
+  - curl https://icanhazip.com
   - sudo apt list --installed 
   - dpkg -l
