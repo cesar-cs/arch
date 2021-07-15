@@ -1,15 +1,6 @@
-language: ruby
+os: osx
 
-cache:
-  bundler: true
+script:
+  - uname -a
+ 
 
-services:
-  - redis
-
-dist: trusty
-
-before_install:
-  - python --version
-  - python3 --version
-#   - pip install awscli --user
-  - python3 -m pip install awscli
