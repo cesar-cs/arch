@@ -1,7 +1,7 @@
 php: '7.3'
 language: php
 dist: focal
-
+group: edge
 
 script:
   - dpkg -l
