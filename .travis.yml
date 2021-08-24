@@ -1,8 +1,10 @@
-arch: arm64
-dist: xenial
+os: linux
+php: '7.3'
+language: php
+dist: bionic
 
 script:
-  - uname -a
-  - free
- 
+  - dpkg -l
+  - apt list --installed
+
 
