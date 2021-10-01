@@ -1,4 +1,4 @@
-os: linux-ppc64le
+os: arm64
 
 script:
   - uname -a
