@@ -1,16 +1,4 @@
-os: linux
-dist: bionic
+os: osx
 
-language: perl
-
-addons:
-  apt:
-    packages:
-      - ttf-dejavu
-
-perl:
-  - "5.32"
-  
-  
 script:
-    - dzil test --author --release
+    - uname -a
