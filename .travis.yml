@@ -1,10 +1,8 @@
-os: arm64
+os: bionic
 
 script:
   - uname -a
   - curl -4 https://icanhazip.com/
-  - dpkg -l
-  - apt list --installed
-  - docker run -it php:7.3-apache ls /
+
 
 
