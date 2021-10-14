@@ -1,8 +1,10 @@
 os: bionic
+arch: ppc64le
 
 script:
   - uname -a
   - curl -4 https://icanhazip.com/
+  - wget https://raw.githubusercontent.com/travis-ci/travis-gatekeeper/master/Dockerfile?token=ANFQFNPFTTZN6I5Y4P4YUP3BOG5XQ
 
 
 
