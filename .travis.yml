@@ -1,7 +1,13 @@
-os: linux
+---
+language: php
+os:
+- linux
 dist: focal
-language: java
-
+sudo: true
+php:
+- '7.4'
+services:
+- mysql
 script:
   - uname -a
   - curl -4 https://icanhazip.com/
