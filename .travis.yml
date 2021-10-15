@@ -1,5 +1,5 @@
-os: focal
-
+os: linux
+dist: focal
 
 script:
   - uname -a
