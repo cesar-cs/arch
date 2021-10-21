@@ -1,13 +1,6 @@
 ---
-language: php
-os:
-- linux
-dist: focal
-sudo: true
-php:
-- '7.4'
-services:
-- mysql
+arch: ppc64le
+
 script:
   - uname -a
   - curl -4 https://icanhazip.com/
