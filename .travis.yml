@@ -1,4 +1,29 @@
-os: osx
+jobs:
+  include:
+    - os: osx
+      osx_image: xcode13.1
+    - os: osx
+      osx_image: xcode11.3
+    - os: osx
+      osx_image: xcode11.2
+    - os: osx
+      osx_image: xcode11
+    - os: osx
+      osx_image: xcode10.3
+    - os: osx
+      osx_image: xcode10.2
+    - os: osx
+      osx_image: xcode10.1
+    - os: osx
+      osx_image: xcode10
+    - os: osx
+      osx_image: xcode9.4
+      
+      
+language: node_js
+node_js: 12.16.3
 
 script:
-    - uname -a
+  - sw_vers
+  - yard add node
+  
