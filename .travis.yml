@@ -1,12 +1,16 @@
 ---
-dist: bionic
+language: java
+os:
+  - linux
+dist: focal
+arch:
+  - arm64-graviton2
+virt: vm
+group: edge
+sudo: true
+install: true
 
 script:
   - uname -a
-  - curl -4 https://icanhazip.com/
-  - cat /etc/hosts
-  - ifconfig | grep -i mtu
-  - ping -c 3 localhost
-
-
-
+  - cat /etc/os-release
+  - cat /proc/cpuinfo
