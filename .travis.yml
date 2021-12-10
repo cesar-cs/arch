@@ -2,24 +2,14 @@ jobs:
   include:
     - os: osx
       osx_image: xcode13.1
-    - os: osx
-      osx_image: xcode13.1
-    - os: osx
-      osx_image: xcode13.1
-    - os: osx
-      osx_image: xcode13.1
-    - os: osx
-      osx_image: xcode13.1
-    - os: osx
-      osx_image: xcode13.1
-    - os: osx
-      osx_image: xcode13.1
-    - os: osx
-      osx_image: xcode13.1
-    - os: osx
-      osx_image: xcode13.1
-      
 
+      
+language: ruby
+rvm:
+- 3.0.1
+- 2.7.3
+- 2.6.5
+      
 script:
   - sw_vers
   - ls -lah /etc/ssl/
