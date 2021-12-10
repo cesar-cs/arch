@@ -3,28 +3,27 @@ jobs:
     - os: osx
       osx_image: xcode13.1
     - os: osx
-#       osx_image: xcode11.3
-#     - os: osx
-#       osx_image: xcode11.2
-#     - os: osx
-#       osx_image: xcode11
-#     - os: osx
-#       osx_image: xcode10.3
+      osx_image: xcode13.1
     - os: osx
-      osx_image: xcode10.2
+      osx_image: xcode13.1
     - os: osx
-      osx_image: xcode10.1
+      osx_image: xcode13.1
     - os: osx
-      osx_image: xcode10
+      osx_image: xcode13.1
     - os: osx
-      osx_image: xcode9.4
+      osx_image: xcode13.1
+    - os: osx
+      osx_image: xcode13.1
+    - os: osx
+      osx_image: xcode13.1
+    - os: osx
+      osx_image: xcode13.1
       
-      
-language: node_js
-node_js: 12.16.3
 
 script:
   - sw_vers
   - ls -lah /etc/ssl/
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  - sleep 240
+  - brew install curl htop bash
   
