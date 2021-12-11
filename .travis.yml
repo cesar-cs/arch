@@ -1,9 +1,6 @@
-jobs:
-  include:
-    - os: osx
-      osx_image: xcode13.1
+os: osx
+osx_image: xcode13.1
 
-      
 language: ruby
 rvm:
 - 3.0.1
