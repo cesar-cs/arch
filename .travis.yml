@@ -1,4 +1,4 @@
-arch: ppc64le
+arch: arm64
 jobs:
   include:
     - os: linux
