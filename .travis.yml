@@ -1,16 +1,9 @@
-os: osx
-osx_image: xcode13.1
+os: linux
+dist: focal
+group: edge
+arch: arm64-graviton2
 
-language: ruby
-rvm:
-- 3.0.1
-- 2.7.3
-- 2.6.5
-      
+virt: lxd 
+
 script:
-  - sw_vers
-  - ls -lah /etc/ssl/
-  - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  - sleep 240
-  - brew install curl htop bash
-  
+  - uname -a
