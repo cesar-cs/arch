@@ -1,17 +1,13 @@
+dist: bionic
 
 jobs:
   include:
     - arch: arm64
     - arch: ppc64le      
     - arch: s390x
-    - arch: amd64
+    
       
 language: java
-
-jdk:
-  - openjdk8
-  - openjdk11
-  - openjdk12
 
 script:
   - uname -a
@@ -25,7 +21,7 @@ script:
 #   - sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
 #   - sudo apt-get update -yqq
 #   - sudo apt-cache search adoptopenjdk
-  - java -version
+#   - java -version
 #   - sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE"
 #   - java -version
 #   - update-java-alternatives -l
