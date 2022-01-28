@@ -7,7 +7,7 @@ jobs:
     - arch: s390x
     
       
-language: java
+language: shell
 
 script:
   - uname -a
