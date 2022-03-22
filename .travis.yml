@@ -1,9 +1,9 @@
 jobs:
   include:
-    - arch: arm64
+    - arch: ppc64le
       dist: xenial
       group: stable
-    - arch: arm64
+    - arch: ppc64le
       dist: bionic
       group: stable
     - arch: ppc64le
