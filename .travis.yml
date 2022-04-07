@@ -1,12 +1,9 @@
----
-os: linux
-jdk: oraclejdk8
-language: android
-dist: trusty
-sudo: true
-
-
+dist: bionic
+jdk: openjdk17
 script:
-  - uname -a
-  - cat /etc/hosts
- 
+  - java -version
+  - sudo update-alternatives --list java
+  - find / -name java 
+
+notifications:
+  email: false
