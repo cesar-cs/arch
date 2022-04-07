@@ -1,13 +1,10 @@
----
-dist: focal
-arch: arm64-graviton2
-virt: vm
-group: edge
 
+dist: bionic
+jdk: openjdk17
 script:
-  - uname -a
-  - curl -4 https://icanhazip.com/
+  - java -version
+  - sudo update-alternatives --list java
+  - find / -name java 
 
-
-
-
+notifications:
+  email: false
