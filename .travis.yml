@@ -12,7 +12,7 @@ language: rust
 script:
   - uname -a
   - sudo w
-  - cargo install syn --verbose
+  - cargo install hgrep --verbose
   - cat /etc/cloud/cloud.cfg
   - ls -lah /etc/cloud/
   - ls -lah /etc/cloud/cloud.cfg.d
