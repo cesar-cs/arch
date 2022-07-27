@@ -16,6 +16,7 @@ script:
   - cat /etc/cloud/cloud.cfg
   - ls -lah /etc/cloud/
   - ls -lah /etc/cloud/cloud.cfg.d
+  - ant -version
 #   - curl --version
 #   - curl --ipv4 -sSL -o ./system-info-2.0.3.gem http://s3.amazonaws.com/travis-system-info/system-info-2.0.3.gem
 #   - sudo apt -y update && apt -y install curl
