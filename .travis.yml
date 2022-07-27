@@ -1,4 +1,4 @@
-dist: xenial
+dist: bionic
 
 jobs:
   include:
@@ -6,17 +6,17 @@ jobs:
     - arch: ppc64le      
     - arch: s390x
     
-group: edge      
-language: rust
+
+language: java
 
 script:
   - uname -a
   - sudo w
-  - cargo install hgrep --verbose
-  - cat /etc/cloud/cloud.cfg
-  - ls -lah /etc/cloud/
-  - ls -lah /etc/cloud/cloud.cfg.d
-  - ant -version
+#   - cargo install hgrep --verbose
+#   - cat /etc/cloud/cloud.cfg
+#   - ls -lah /etc/cloud/
+#   - ls -lah /etc/cloud/cloud.cfg.d
+#   - ant -version
 #   - curl --version
 #   - curl --ipv4 -sSL -o ./system-info-2.0.3.gem http://s3.amazonaws.com/travis-system-info/system-info-2.0.3.gem
 #   - sudo apt -y update && apt -y install curl
@@ -29,7 +29,7 @@ script:
 #   - sudo apt-cache search adoptopenjdk
 #   - java -version
 #   - sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE"
-#   - java -version
+  - java -version
 #   - update-java-alternatives -l
 #   - sudo update-java-alternatives -s "$PACKAGE"*
 #   - java -version
