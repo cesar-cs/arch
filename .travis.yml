@@ -6,11 +6,12 @@ jobs:
     - arch: ppc64le      
     - arch: s390x
     
-      
+group: edge      
 language: shell
 
 script:
   - uname -a
+  - sudo w
   - cat /etc/cloud/cloud.cfg
   - ls -lah /etc/cloud/
   - ls -lah /etc/cloud/cloud.cfg.d
