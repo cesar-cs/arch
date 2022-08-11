@@ -6,7 +6,7 @@ jobs:
     - arch: ppc64le      
     - arch: s390x
     
-
+group: edge
 language: go
 
 go:
