@@ -7,11 +7,17 @@ jobs:
     - arch: s390x
     
 
-language: java
+language: go
+
+go:
+- 1.19
+- master
+
 
 script:
   - uname -a
   - sudo w
+  - go version
 #   - cargo install hgrep --verbose
 #   - cat /etc/cloud/cloud.cfg
 #   - ls -lah /etc/cloud/
