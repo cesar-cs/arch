@@ -7,6 +7,7 @@ script:
   - ls -la $HOME
   - ls -lah /etc/cloud/cloud.cfg.d/
   - cat /etc/cloud/cloud.cfg
+  - cat /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
 
 
 language: python
