@@ -1,13 +1,15 @@
----
-dist: focal
-arch: arm64-graviton2
-virt: lxd
-group: edge
+os: osx
+osx_image: xcode13.4
+ 
 
-script:
-  - uname -a
-  - curl -4 https://icanhazip.com/
+language: ruby
+rvm:
+  - 2.7.4
+  - 3.0.0
+  - 3.1.1
+ 
 
-
-
-
+before_script:
+    - sw_vers
+    - uname -a
+    
