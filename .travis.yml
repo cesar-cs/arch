@@ -1,7 +1,5 @@
 os: osx
 osx_image: xcode13.4
-# os: linux
-# dist: focal
  
 language: ruby
 rvm:
@@ -11,9 +9,9 @@ rvm:
  
 
 before_script:
-#     - sw_vers
-    - uname -a
-    - rvm --version
+  - sw_vers
+  - uname -a
+  - rvm --version
 
 script:
   - ruby --version
