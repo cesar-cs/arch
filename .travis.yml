@@ -1,6 +1,7 @@
 ---
 dist: focal
-arch: arm64-graviton2
+# arch: arm64-graviton2
+arch: arm64
 virt: lxd
 group: edge
 
