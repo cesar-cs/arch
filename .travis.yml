@@ -1,5 +1,5 @@
-os: osx
-osx_image: xcode12.5
+os: linux
+osx_image: bionic
  
 language: ruby
 rvm:
