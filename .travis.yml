@@ -1,6 +1,6 @@
-os: linux
-# osx_image: xcode13.4
-dist: focal
+os: osx
+osx_image: xcode13.4
+# dist: focal
  
 language: ruby
 rvm:
