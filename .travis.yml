@@ -1,6 +1,6 @@
 os: linux
 # osx_image: xcode13.4
-dist: bionic
+dist: xenial
  
 language: ruby
 rvm:
