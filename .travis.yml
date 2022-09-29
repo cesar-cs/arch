@@ -2,12 +2,12 @@ jobs:
   include:
     - arch: ppc64le
       dist: xenial
-      group: stable
+      group: test
     - arch: ppc64le
       dist: bionic
-      group: stable
+      group: test
     - arch: ppc64le
-      dist: focal
+      dist: test
       group: stable
    
 
@@ -19,5 +19,9 @@ script:
   - ls -lah /etc/cloud/cloud.cfg.d/
   - cat /etc/cloud/cloud.cfg
   - cat /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
-  - cat /etc/hosts  
+  - cat /etc/hosts 
+  - sudo true
+  - echo -n "127.0.0.1 localhost " | sudo tee -a /etc/hosts
+  - cat /etc/hosts 
+  - sudo true
   
