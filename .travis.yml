@@ -1,12 +1,12 @@
 jobs:
   include:
-#     - arch: ppc64le
-#       dist: xenial
-#       group: test
-#     - arch: ppc64le
-#       dist: bionic
-#       group: test
-    - arch: amd64
+    - arch: ppc64le
+      dist: xenial
+      group: test
+    - arch: ppc64le
+      dist: bionic
+      group: test
+    - arch: ppc64le
       dist: focal
       group: stable
    
@@ -15,6 +15,7 @@ jobs:
 
 script:
   - uname -a
+  - hostname
   - cat /etc/hosts
   - ls -lah /etc/cloud/cloud.cfg.d/
   - cat /etc/cloud/cloud.cfg
