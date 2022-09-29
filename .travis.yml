@@ -7,7 +7,7 @@ jobs:
       dist: bionic
       group: test
     - arch: ppc64le
-      dist: test
+      dist: focal
       group: stable
    
 
