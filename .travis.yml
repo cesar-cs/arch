@@ -2,13 +2,13 @@ jobs:
   include:
     - arch: ppc64le
       dist: xenial
-      group: test
+      group: edge
     - arch: ppc64le
       dist: bionic
-      group: test
+      group: edge
     - arch: ppc64le
       dist: focal
-      group: test
+      group: edge
    
 
 
