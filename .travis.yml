@@ -21,7 +21,8 @@ script:
   - cat /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
   - cat /etc/hosts 
   - sudo true
-  - echo -n "127.0.0.1 localhost " | sudo tee -a /etc/hosts
-  - cat /etc/hosts 
-  - sudo true
+  - ping -c 3 localhost
+#   - echo -n "127.0.0.1 localhost " | sudo tee -a /etc/hosts
+#   - cat /etc/hosts 
+#   - sudo true
   
