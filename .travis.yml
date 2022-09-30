@@ -8,7 +8,7 @@ jobs:
       group: test
     - arch: ppc64le
       dist: focal
-      group: stable
+      group: test
    
 
 
