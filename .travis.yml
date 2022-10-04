@@ -1,14 +1,8 @@
 ---
-dist: focal
-# arch: arm64-graviton2
-arch: arm64
-virt: lxd
-group: edge
-
-script:
-  - uname -a
-  - curl -4 https://icanhazip.com/
-
-
-
-
+language: clojure
+lein: 2.9.1
+dist: bionic
+arch:
+  - amd64
+  - s390x
+os: linux
