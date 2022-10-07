@@ -15,6 +15,7 @@ jobs:
 
 script:
   - uname -a
+  - ant -v
   - cat /etc/hostname
   - cat /etc/hosts
   - cat /etc/nsswitch.conf
