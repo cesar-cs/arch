@@ -6,11 +6,11 @@ jobs:
     - arch: ppc64le      
     - arch: s390x
     
-group: edge
-language: go
+# group: edge
+# language: go
 
-go:
-- master
+# go:
+# - master
 
 
 script:
