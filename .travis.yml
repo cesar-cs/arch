@@ -1,16 +1,16 @@
-os: osx
-osx_image: xcode13.1
-# dist: focal
- 
-language: ruby
-rvm:
-  - 2.7.4
-  - 3.0.0
-  - 3.1.0
- 
+---
+language: go
+os:
+- linux
+dist: xenial
+sudo: true
+
+arch:
+- arm64
+go:
+- '1.18'
+services:
+- docker
 
 script:
-  - ruby --version
-  - rvm --version
-  - gem install rake
-
+- uname -a
