@@ -1,12 +1,12 @@
 ---
-dist: bionic
+dist: xenial
 
 script:
-  - uname -a
+  - dpkg -l
   - curl -4 https://icanhazip.com/
-  - cat /etc/hosts
-  - ifconfig | grep -i mtu
-  - ping -c 3 localhost
+  - uname -a
+  - cat /etc/os-release
+  - apt list --installed
 
 
 
