@@ -4,8 +4,8 @@ language: python
 python:
   - 3.9.15
   - 3.9.16
-#   - 3.10.9
-#   - 3.11.2
+  - 3.10.9
+  - 3.11.2
 
 install: skip
 
