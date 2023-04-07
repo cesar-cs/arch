@@ -205,7 +205,7 @@ else
 
  
   ## workaround for ruby 2.3.x 
-  if [[ $VERSION =~ "2.3.*" ]]; then
+  if [[ $VERSION =~ 2.3.* ]]; then
     echo "deb http://security.ubuntu.com/ubuntu bionic-security main" | sudo tee -a /etc/apt/sources.list
     sudo apt update 
     sudo apt-get install openssl
