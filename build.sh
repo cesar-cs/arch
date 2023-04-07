@@ -285,7 +285,7 @@ fold_start check.1 "make sure bundler works"
 if [ -n "${SKIP_CHECK}" ]; then
   echo '$SKIP_CHECK is set, skipping bundler check'
 else
-  if [[ $VERSION =~ "2.3.*" ]]; then
+  if [[ $VERSION =~ 2.3.* ]]; then
     rvm $RUBY do gem install bundler -v 2.3.26
   else  
     echo "source 'https://rubygems.org'; gem 'sinatra'" > Gemfile
