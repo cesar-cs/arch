@@ -9,8 +9,8 @@ ruby:
 install:
   - echo "deb http://security.ubuntu.com/ubuntu bionic-security main" | sudo tee -a /etc/apt/sources.list
   - sudo apt update
-  - sudo apt-get install openssl
+  - sudo apt-get install openssl -y 
   - sudo apt-cache policy libssl1.0-dev
-  - sudo apt-get install libssl1.0-dev
+  - sudo apt-get install libssl1.0-dev -y 
   
 script: ruby -v
