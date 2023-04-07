@@ -7,6 +7,8 @@ announce() {
   travis_time_finish
 }
 
+VERSION=2.3.8
+
 travis_retry() {
   local result=0
   local count=1
@@ -201,14 +203,18 @@ else
   fold_start rvm.4 "Linux specific setup"
   MOVABLE_FLAG="--movable"
 
-  # announce sudo apt-get update
-  # announce sudo apt-get install libssl1.0.0 openssl
-  
+ 
   ## workaround for ruby 2.3.x 
-  echo "deb http://security.ubuntu.com/ubuntu bionic-security main" | sudo tee -a /etc/apt/sources.list
-  sudo apt update 
-  sudo apt-cache policy libssl1.0-dev
-  sudo apt-get install libssl1.0-dev
+  if [[ $VERSION =~ "2.3.*" ]]; then
+    echo "deb http://security.ubuntu.com/ubuntu bionic-security main" | sudo tee -a /etc/apt/sources.list
+    sudo apt update 
+    sudo apt-get install openssl
+    sudo apt-cache policy libssl1.0-dev
+    sudo apt-get install libssl1.0-dev
+  else
+    announce sudo apt-get update
+    announce sudo apt-get install libssl1.0.0 openssl
+  fi 
 
   fold_end rvm.4
 fi
@@ -279,9 +285,13 @@ fold_start check.1 "make sure bundler works"
 if [ -n "${SKIP_CHECK}" ]; then
   echo '$SKIP_CHECK is set, skipping bundler check'
 else
-  echo "source 'https://rubygems.org'; gem 'sinatra'" > Gemfile
-  announce travis_retry rvm $RUBY do gem install bundler
-  announce travis_retry rvm $RUBY do bundle install
+  if [[ $VERSION =~ "2.3.*" ]]; then
+    rvm $RUBY do gem install bundler -v 2.3.26
+  else  
+    echo "source 'https://rubygems.org'; gem 'sinatra'" > Gemfile
+    announce travis_retry rvm $RUBY do gem install bundler
+    announce travis_retry rvm $RUBY do bundle install
+  fi  
 fi
 fold_end check.1
 
