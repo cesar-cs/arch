@@ -17,4 +17,5 @@ script:
 - ruby -v
 - rvm list
 - ruby -e 'puts "HEY PLANET"'
-- gem install bundler
+- gem install bundler -v 2.3.26
+
