@@ -19,7 +19,9 @@ script:
 # - rvm get stable
 - ruby -e 'puts "HEY PLANET"'
 - gem install bundler -v 2.3.26
-- rvm use 2.6.9
+- rvm remove 2.6.9
+- ruby -v
+- rvm use 2.6.9 --install --binary --fuzzy 
 - ruby -v
 - ruby -e 'puts "HEY PLANET"'
 - gem install bundler -v 2.3.26
