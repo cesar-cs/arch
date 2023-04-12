@@ -6,11 +6,15 @@ ruby:
   - 3.0.0
 
 
-install:
-  - echo "deb http://security.ubuntu.com/ubuntu bionic-security main" | sudo tee -a /etc/apt/sources.list
-  - sudo apt update
-  - sudo apt-get install openssl -y 
-  - sudo apt-cache policy libssl1.0-dev
-  - sudo apt-get install libssl1.0-dev -y 
+# install:
+#   - echo "deb http://security.ubuntu.com/ubuntu bionic-security main" | sudo tee -a /etc/apt/sources.list
+#   - sudo apt update
+#   - sudo apt-get install openssl -y 
+#   - sudo apt-cache policy libssl1.0-dev
+#   - sudo apt-get install libssl1.0-dev -y 
   
-script: gem install bundler
+script:
+- ruby -v
+- rvm list
+- ruby -e 'puts "HEY PLANET"'
+- gem install bundler
