@@ -14,6 +14,7 @@ script:
 - ruby -v
 - rvm list
 # - rvm get stable
+- rvm use 2.6.9
 - ruby -e 'puts "HEY PLANET"'
 - gem install bundler -v 2.3.26
 - rvm remove 2.6.9
