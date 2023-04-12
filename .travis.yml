@@ -1,7 +1,7 @@
 language: java
 os: linux
 dist: bionic
-group: edge
+group: cs-test
 
 # install:
 #   - echo "deb http://security.ubuntu.com/ubuntu bionic-security main" | sudo tee -a /etc/apt/sources.list
