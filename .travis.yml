@@ -1,7 +1,7 @@
 language: ruby
 os: linux
 dist: bionic
-group: cs-test
+group: previous
 
 ruby:
   - 2.6.9
