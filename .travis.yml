@@ -1,4 +1,4 @@
-language: minimal
+language: ruby
 os: linux
 dist: bionic
 group: dev
