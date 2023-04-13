@@ -1,11 +1,11 @@
-language: ruby
+language: java
 os: linux
 dist: bionic
 group: dev
 
-ruby:
-  - 2.6.9
-  - 3.0.0
+# ruby:
+#   - 2.6.9
+#   - 3.0.0
 # install:
 #   - echo "deb http://security.ubuntu.com/ubuntu bionic-security main" | sudo tee -a /etc/apt/sources.list
 #   - sudo apt update
