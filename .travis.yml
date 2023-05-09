@@ -1,35 +1,35 @@
 jobs:
   include:
-    - arch: ppc64le
+    - arch: s390x
       dist: xenial
-      group: edge
-    - arch: ppc64le
+    - arch: s390x
       dist: bionic
-      group: edge
-    - arch: ppc64le
+    - arch: s390x
       dist: focal
-      group: edge
+    - arch: s390x
+      dist: jammy
+
    
 
 
 
 script:
   - uname -a
-  - ant -v
-  - cat /etc/hostname
-  - cat /etc/hosts
-  - cat /etc/nsswitch.conf
-  - cat /etc/resolv.conf
-  - getent hosts localhost.localdomain
-  - sudo true
-  - hostnamectl
-  - hostname
-  - ls -lah /etc/cloud/cloud.cfg.d/
-  - cat /etc/cloud/cloud.cfg
-  - cat /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
-  - cat /etc/hosts 
-  - sudo true
-  - ping -c 3 localhost
+#   - ant -v
+#   - cat /etc/hostname
+#   - cat /etc/hosts
+#   - cat /etc/nsswitch.conf
+#   - cat /etc/resolv.conf
+#   - getent hosts localhost.localdomain
+#   - sudo true
+#   - hostnamectl
+#   - hostname
+#   - ls -lah /etc/cloud/cloud.cfg.d/
+#   - cat /etc/cloud/cloud.cfg
+#   - cat /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
+#   - cat /etc/hosts 
+#   - sudo true
+#   - ping -c 3 localhost
 #   - echo -n "127.0.0.1 localhost " | sudo tee -a /etc/hosts
 #   - cat /etc/hosts 
 #   - sudo true
