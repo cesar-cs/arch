@@ -20,6 +20,7 @@ jobs:
 script:
   - uname -a
   - python3 --version
+  - python --version
 #   - ant -v
 #   - cat /etc/hostname
 #   - cat /etc/hosts
