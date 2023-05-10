@@ -34,4 +34,7 @@ ruby:
   - 2.5.8
   - 2.5.9
 install: skip
-script: true
+script:
+  - ruby -v
+  - bundle -v
+  - gem install sinatra --no-ri --no-rdoc
