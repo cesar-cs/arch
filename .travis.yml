@@ -16,7 +16,8 @@ script:
 - bundle -v
 - ruby -e 'puts "HEY PLANET"'
 - rvm list
-- gem install faraday
+- gem install sinatra
+- gem install rubocop
 # - rvm get stable
 #- rvm use 2.6.9
 
