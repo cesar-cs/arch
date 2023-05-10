@@ -1,13 +1,17 @@
 jobs:
   include:
-    - arch: s390x
+    - arch: amd64
       dist: xenial
+    - arch: amd64
+      dist: bionic
+    - arch: amd64
+      dist: focal
+    - arch: amd64
+      dist: jammy
     - arch: s390x
       dist: bionic
-    - arch: s390x
-      dist: focal
-    - arch: s390x
-      dist: jammy
+    - arch: arm
+      dist: bionic
 
    
 
@@ -15,6 +19,7 @@ jobs:
 
 script:
   - uname -a
+  - python3 -v
 #   - ant -v
 #   - cat /etc/hostname
 #   - cat /etc/hosts
