@@ -12,7 +12,8 @@ jobs:
       dist: bionic
     - arch: arm
       dist: bionic
-
+    - arch: ppc64le
+      dist: bionic
    
 
 language: python
