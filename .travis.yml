@@ -4,11 +4,11 @@ arch: amd64
 language: ruby
 ruby: 2.6.9
 
-before_install: gem install bundler -v 2.4.9
 
 script: 
     - rvm list
     - ruby -v
+    - gem install bundler -v 2.4.9
 
 jobs:
   include:
