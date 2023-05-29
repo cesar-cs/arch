@@ -1,7 +1,10 @@
 os: linux
 dist: focal
 language: python
-script: python -V
+script:
+  - python -V
+  - apt list --installed
+  - dpkg -l
 
 jobs:
   include:
