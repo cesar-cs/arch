@@ -1,5 +1,6 @@
 os: linux
 arch: amd64
+group: dev
 
 language: ruby
 ruby: 2.6.9
