@@ -1,19 +1,9 @@
-language: shell
-
-os: osx
-
-before_install:
-  - git clone https://github.com/travis-ci/packer-templates.git
-script:
-  - ls -la
-  - python3 -V
-  - python -V
+os: linux
+dist: focal
+language: python
+script: python -V
 
 jobs:
   include:
-    - osx_image: xcode13.1
-    - osx_image: xcode13.2
-    - osx_image: xcode13.3
-    - osx_image: xcode14.2
-    - osx_image: xcode12.5
-    - osx_image: xcode11
+    - name: "beta1"
+      python: 3.12-beta1
