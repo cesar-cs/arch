@@ -5,6 +5,7 @@ script:
   - python -V
   - apt list --installed
   - dpkg -l
+  - uname -a
 
 jobs:
   include:
