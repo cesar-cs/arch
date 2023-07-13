@@ -5,9 +5,10 @@ jobs:
     - arch: arm64
     - arch: ppc64le      
     - arch: s390x
+    - arch: amd64
     
 # group: edge
-# language: go
+language: python
 
 # go:
 # - master
@@ -15,8 +16,10 @@ jobs:
 
 script:
   - uname -a
-  - sudo w
+  # - sudo w
   - go version
+  - dpkg -l | grep make
+  - make --version
 #   - cargo install hgrep --verbose
 #   - cat /etc/cloud/cloud.cfg
 #   - ls -lah /etc/cloud/
@@ -34,7 +37,7 @@ script:
 #   - sudo apt-cache search adoptopenjdk
 #   - java -version
 #   - sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE"
-  - java -version
+  # - java -version
 #   - update-java-alternatives -l
 #   - sudo update-java-alternatives -s "$PACKAGE"*
 #   - java -version
