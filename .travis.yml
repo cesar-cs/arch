@@ -20,6 +20,7 @@ script:
   - go version
   - dpkg -l | grep make
   - make --version
+  - echo $TRAVIS
 #   - cargo install hgrep --verbose
 #   - cat /etc/cloud/cloud.cfg
 #   - ls -lah /etc/cloud/
