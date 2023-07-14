@@ -18,7 +18,7 @@ script:
   - uname -a
   # - sudo w
   - go version
-  - dpkg -l | grep make
+  - dpkg -l
   - make --version
   - echo $TRAVIS
 #   - cargo install hgrep --verbose
