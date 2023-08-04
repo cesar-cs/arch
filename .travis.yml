@@ -8,7 +8,7 @@ jobs:
     - arch: amd64
     
 # group: edge
-language: python
+language: java
 
 # go:
 # - master
