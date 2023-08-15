@@ -4,7 +4,7 @@ language: java
 script:
   - java -version
   - sudo update-alternatives --list java
-  - apt-get update
+  - sudo apt-get update
 
 notifications:
   email: false
