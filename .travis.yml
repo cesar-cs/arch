@@ -1,6 +1,6 @@
 
 dist: bionic
-jdk: openjdk17
+language: java
 script:
   - java -version
   - sudo update-alternatives --list java
