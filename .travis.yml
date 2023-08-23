@@ -21,9 +21,6 @@ script:
   - dpkg -l
   - make --version
   - echo $TRAVIS
-  - sleep 550 && echo "true"
-  - sleep 550 && echo "true"
-  - sleep 550 && echo "true"
   # - docker run busybox uname -a
 #   - cargo install hgrep --verbose
 #   - cat /etc/cloud/cloud.cfg
