@@ -8,7 +8,7 @@ jobs:
     - arch: amd64
     
 # group: edge
-language: java
+language: minimal
 
 # go:
 # - master
@@ -19,8 +19,10 @@ script:
   # - sudo w
   - go version
   - dpkg -l
-  - make --version
-  - echo $TRAVIS
+  - python3 --version
+  - which python
+  
+  
   # - docker run busybox uname -a
 #   - cargo install hgrep --verbose
 #   - cat /etc/cloud/cloud.cfg
