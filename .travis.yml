@@ -17,11 +17,13 @@ language: minimal
 script:
   - uname -a
   # - sudo w
-  - go version
-  - dpkg -l
+  #- go version
+  #- dpkg -l
   - python3 --version
-  - which python
-  
+  - 'export OS_NAME=${OS_NAME:-$((lsb_release -is || if [[ $(uname -a) == *"FreeBSD"* ]]; then echo $(uname | cut -c1-); else false; fi || echo "osx") | tr "A-Z" "a-z")}'
+  - "export ARCH=${ARCH:-$(uname -m)}"
+  - echo $OS_NAME
+  - echo $ARCH
   
   # - docker run busybox uname -a
 #   - cargo install hgrep --verbose
