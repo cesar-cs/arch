@@ -1,4 +1,4 @@
-dist: jammy
+dist: bionic
 
 jobs:
   include:
@@ -8,7 +8,7 @@ jobs:
     - arch: amd64
     
 # group: edge
-language: minimal
+language: python
 
 # go:
 # - master
@@ -16,6 +16,10 @@ language: minimal
 
 script:
   - uname -a
+  - python3 -m pip install coverage
+  - coverage --version
+  - coverage debug sys
+  
   # - sudo w
   #- go version
   #- dpkg -l
