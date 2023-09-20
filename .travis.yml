@@ -26,6 +26,7 @@ matrix:
 
 before_install:
   - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+  - nvm --version
   - 'nvm install-latest-npm'
   - 'NPM_CONFIG_LEGACY_PEER_DEPS=true npm install'
   - 'npm run copy-metafiles'
