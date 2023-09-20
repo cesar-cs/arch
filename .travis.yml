@@ -1,54 +1,41 @@
-dist: bionic
+language: node_js
 
-jobs:
+# osx backlog is often deep, so to be polite we can just hit these highlights
+matrix:
   include:
-    - arch: arm64
-    - arch: ppc64le      
-    - arch: s390x
-    - arch: amd64
-    
-# group: edge
-language: python
+  - os: osx
+    env: ESLINT_VERSION=5
+    node_js: 14
+  - os: osx
+    env: ESLINT_VERSION=5
+    node_js: 12
+  - os: osx
+    env: ESLINT_VERSION=5
+    node_js: 10
+  - os: osx
+    env: ESLINT_VERSION=4
+    node_js: 8
+  - os: osx
+    env: ESLINT_VERSION=3
+    node_js: 6
+  - os: osx
+    env: ESLINT_VERSION=2
+    node_js: 4
 
-# go:
-# - master
+  fast_finish: true
 
+before_install:
+  - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+  - 'nvm install-latest-npm'
+  - 'NPM_CONFIG_LEGACY_PEER_DEPS=true npm install'
+  - 'npm run copy-metafiles'
+install:
+  - 'NPM_CONFIG_LEGACY_PEER_DEPS=true npm install'
+  - 'if [ -n "${ESLINT_VERSION}" ]; then ./tests/dep-time-travel.sh; fi'
+  - 'npm run pretest'
 
 script:
-  - uname -a
-  - python3 -m pip install coverage
-  - coverage --version
-  - coverage debug sys
-  
-  # - sudo w
-  #- go version
-  #- dpkg -l
-  - python3 --version
-  - 'export OS_NAME=${OS_NAME:-$((lsb_release -is || if [[ $(uname -a) == *"FreeBSD"* ]]; then echo $(uname | cut -c1-); else false; fi || echo "osx") | tr "A-Z" "a-z")}'
-  - "export ARCH=${ARCH:-$(uname -m)}"
-  - echo $OS_NAME
-  - echo $ARCH
-  
-  # - docker run busybox uname -a
-#   - cargo install hgrep --verbose
-#   - cat /etc/cloud/cloud.cfg
-#   - ls -lah /etc/cloud/
-#   - ls -lah /etc/cloud/cloud.cfg.d
-#   - ant -version
-#   - curl --version
-#   - curl --ipv4 -sSL -o ./system-info-2.0.3.gem http://s3.amazonaws.com/travis-system-info/system-info-2.0.3.gem
-#   - sudo apt -y update && apt -y install curl
-#   - curl --version
-#   - export JAVA_VERSION=12
-#   - export PACKAGE="adoptopenjdk-${JAVA_VERSION}-hotspot"
-#   - wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
-#   - sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
-#   - sudo apt-get update -yqq
-#   - sudo apt-cache search adoptopenjdk
-#   - java -version
-#   - sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE"
-  # - java -version
-#   - update-java-alternatives -l
-#   - sudo update-java-alternatives -s "$PACKAGE"*
-#   - java -version
+  - npm run tests-only
 
+after_success:
+  - bash <(curl -Os https://uploader.codecov.io/latest/linux/codecov)
