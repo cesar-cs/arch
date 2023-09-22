@@ -6,21 +6,21 @@ matrix:
   - os: osx
     env: ESLINT_VERSION=5
     node_js: 14
-  # - os: osx
-  #   env: ESLINT_VERSION=5
-  #   node_js: 12
-  # # - os: osx
-  #   env: ESLINT_VERSION=5
-  #   node_js: 10
-  # - os: osx
-  #   env: ESLINT_VERSION=4
-  #   node_js: 8
-  # - os: osx
-  #   env: ESLINT_VERSION=3
-  #   node_js: 6
-  # - os: osx
-  #   env: ESLINT_VERSION=2
-  #   node_js: 4
+  - os: osx
+    env: ESLINT_VERSION=5
+    node_js: 12
+  - os: osx
+    env: ESLINT_VERSION=5
+    node_js: 10
+  - os: osx
+    env: ESLINT_VERSION=4
+    node_js: 8
+  - os: osx
+    env: ESLINT_VERSION=3
+    node_js: 6
+  - os: osx
+    env: ESLINT_VERSION=2
+    node_js: 4
 
   fast_finish: true
 
