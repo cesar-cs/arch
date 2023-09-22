@@ -25,9 +25,9 @@ matrix:
   fast_finish: true
 
 before_install:
-  - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-  - export NVM_DIR="$HOME/.nvm"
-  - source $NVM_DIR/nvm.sh
+  # - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+  # - export NVM_DIR="$HOME/.nvm"
+  # - source $NVM_DIR/nvm.sh
   - nvm --version
   - 'nvm install-latest-npm'
   - 'NPM_CONFIG_LEGACY_PEER_DEPS=true npm install'
