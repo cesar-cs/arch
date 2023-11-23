@@ -17,7 +17,7 @@ script:
   - uname -a
   - apt-get update
   - apt-get install ncat
-  - [ping -c 10 8.8.8.8
+  - ping -c 10 8.8.8.8
 #   - ant -v
 #   - cat /etc/hostname
 #   - cat /etc/hosts
