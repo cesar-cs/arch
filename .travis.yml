@@ -17,6 +17,7 @@ script:
   - uname -a
   - sudo apt-get update
   - ping -c 10 8.8.8.8
+  - echo $?
   - ip addr
 #   - ant -v
 #   - cat /etc/hostname
