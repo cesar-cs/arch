@@ -19,6 +19,7 @@ script:
   - ping -c 10 8.8.8.8
   - echo $?
   - ip addr
+  - sudo sysctl net.ipv4.ping_group_range
 #   - ant -v
 #   - cat /etc/hostname
 #   - cat /etc/hosts
