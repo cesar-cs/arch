@@ -21,6 +21,8 @@ script:
   - ip addr
   - sudo sysctl net.ipv4.ping_group_range
   - cat /proc/self/gid_map
+  - cat /etc/subuid
+  - cat /etc/subgid
 #   - ant -v
 #   - cat /etc/hostname
 #   - cat /etc/hosts
