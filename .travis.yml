@@ -10,7 +10,7 @@ script:
   - uname -a
   - ls -ltrah /tmp
   - sudo apt-get update
-  - sudo apt-get install libqtwebkit-dev google-chrome-stable -y
+  - sudo apt-get install libqt5webkit5-dev google-chrome-stable -y
   
 
 
