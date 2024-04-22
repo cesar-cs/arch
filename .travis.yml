@@ -1,11 +1,16 @@
 ---
 dist: bionic
+language: minimal
 # arch: arm64-graviton2
 # virt: vm
 # group: edge
 
 script:
   - uname -a
+  - ls -ltrah /tmp
+  - sudo apt-get update
+  - sudo apt-get install google-chrome-stable
+  
 
 
 
