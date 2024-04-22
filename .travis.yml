@@ -1,9 +1,14 @@
 ---
-dist: jammy
-language: go
+# dist: jammy
+# language: go
 # arch: arm64-graviton2
 # virt: vm
 # group: edge
+
+os: linux
+rvm: 2.5.8
+language: ruby
+dist: xenial
 
 script:
   - uname -a
