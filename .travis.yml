@@ -1,6 +1,6 @@
 ---
 dist: jammy
-language: ruby
+language: go
 # arch: arm64-graviton2
 # virt: vm
 # group: edge
@@ -21,6 +21,7 @@ script:
   - sudo apt-get install -y pdftk
   - sudo apt install python3-setuptools
   - sudo apt install python3-pip
+  - sudo apt-get -o Dpkg::Options::="--force-confnew" install -yq docker-ce
     
   
   
