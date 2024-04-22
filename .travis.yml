@@ -1,6 +1,6 @@
 ---
 dist: jammy
-language: minimal
+language: go
 # arch: arm64-graviton2
 # virt: vm
 # group: edge
