@@ -1,20 +1,16 @@
 ---
-# dist: jammy
-# language: go
+dist: jammy
+language: ruby
 # arch: arm64-graviton2
 # virt: vm
 # group: edge
 
-os: linux
-rvm: 2.5.8
-language: ruby
-dist: xenial
 
 script:
   - uname -a
   - ls -ltrah /tmp
   - sudo apt-get update
-  - sudo apt-get install google-chrome-stable
+  - sudo apt-get install libqtwebkit-dev google-chrome-stable -y
   
 
 
