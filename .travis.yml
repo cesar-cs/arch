@@ -2,7 +2,7 @@ jobs:
   include:
     - arch: arm64-graviton2
       os: linux
-      dist: focal
+      dist: jammy
       group: edge
       arch: arm64-graviton2
       virt: vm
