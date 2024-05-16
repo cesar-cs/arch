@@ -9,7 +9,7 @@ jobs:
 
       
 script:
-  - cat /etc/os-relase
+  - cat /etc/os-release
   - uname -a
   - cat /proc/cpuinfo
   - curl icanhazip.com
