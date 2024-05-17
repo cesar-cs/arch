@@ -10,7 +10,8 @@ jobs:
       
 script:
   - cat /etc/os-release
-  - cat /etc/hosts
+  #- cat /etc/hosts
+  - dpl --version
   - uname -a
   - cat /proc/cpuinfo
   - curl icanhazip.com
