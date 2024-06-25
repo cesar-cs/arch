@@ -1,6 +1,5 @@
 ---
 dist: focal
-group: dev
 language: python
 # arch: arm64-graviton2
 # virt: vm
