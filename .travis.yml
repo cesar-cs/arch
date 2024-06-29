@@ -11,7 +11,8 @@ script:
   - ls -ltrah /tmp
   # - sudo apt-get update
   # - sudo apt-get install libqt5webkit5-dev google-chrome-stable -y
-  # - sudo apt-get install -y imagemagick
+  - sudo apt-get install -y imagemagick
+  - sleep 360
   # - sudo apt-get install -y openjdk-11-jdk
   # - sudo update-java-alternatives -s /usr/lib/jvm/java-1.11.0-openjdk-amd64
   # - sudo apt-get install -y poppler-utils
@@ -19,7 +20,7 @@ script:
   # - sudo apt-get install -y xfonts-75dpi
   # - sudo apt-get install -y fontconfig
   # - sudo apt-get install -y pdftk
-  # - sudo apt install python3-setuptools
+  - sudo apt install python3-setuptools
   # - sudo apt install python3-pip
   # - sudo apt-get -o Dpkg::Options::="--force-confnew" install -yq docker-ce
     
