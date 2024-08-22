@@ -1,7 +1,7 @@
 os: linux
 dist: jammy
-arch: s390x
-group: stable
+arch: arm64
+group: bionic
 language: ruby
 ruby:
   - 3.0.0
