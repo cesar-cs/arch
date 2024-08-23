@@ -1,8 +1,8 @@
 os: linux
-dist: focal
+dist: bionic
 arch: s390x
-group: edge
-language: java
+group: stable
+language: minimal
 # ruby:
 #   - 3.0.0
 #   - 3.0.1
