@@ -1,7 +1,7 @@
 os: linux
 dist: bionic
 arch: s390x
-group: stable
+group: previous
 language: ruby
 ruby:
   - 3.0.0
