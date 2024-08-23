@@ -1,5 +1,5 @@
 os: linux
-dist: jammy
+dist: bionic
 arch: s390x
 group: edge
 language: java
