@@ -2,13 +2,13 @@ os: linux
 dist: bionic
 arch: s390x
 group: previous
-language: ruby
-ruby:
-  - 3.0.0
-  - 3.0.1
-  - 3.0.2
-  - 2.7.7
-  # - 2.7.6  
+language: java
+# ruby:
+#   - 3.0.0
+#   - 3.0.1
+#   - 3.0.2
+#   - 2.7.7
+#   # - 2.7.6  
 install: skip
 script:
   - ruby -v
