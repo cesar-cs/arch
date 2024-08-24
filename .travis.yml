@@ -1,8 +1,8 @@
 os: linux
-dist: bionic
+dist: jammy
 arch: s390x
-group: stable
-language: minimal
+group: edge
+language: java
 # ruby:
 #   - 3.0.0
 #   - 3.0.1
