@@ -1,11 +1,12 @@
 dist: bionic
+group: previous
 
 jobs:
   include:
     - arch: arm64
-    - arch: ppc64le      
-    - arch: s390x
-    - arch: amd64
+    # - arch: ppc64le      
+    # - arch: s390x
+    # - arch: amd64
     
 # group: edge
 language: python
