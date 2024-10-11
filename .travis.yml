@@ -3,24 +3,25 @@ os: linux
 group: edge
 
 script:
-  # Check .cargo folder permission. Should be owned by travis user
   - ls -la $HOME
   - ls -lah /etc/cloud/cloud.cfg.d/
   - cat /etc/cloud/cloud.cfg
   - cat /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
   - cat /etc/hosts
+  - cloud-init status --long
+  
 
 
-language: python
-python:
-  - "3.8"
+language: java
+# python:
+#   - "3.8"
 
 jobs:
   include:
     - arch: ppc64le
-      dist: bionic
-    - arch: ppc64le
-      dist: focal
+      dist: jammy
+    # - arch: ppc64le
+    #   dist: focal
     # xenial will be deprecated in future
-    - arch: ppc64le
-      dist: xenial
+    # - arch: ppc64le
+    #   dist: xenial
