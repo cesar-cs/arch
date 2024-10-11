@@ -20,6 +20,7 @@ script:
   - cloud-init status --long
   - cat /etc/cloud/cloud.cfg
   - ls -lah /var/lib/lxd/
+  - sleep 600
   # - python3 -m pip install coverage
   # - coverage --version
   # - coverage debug sys
