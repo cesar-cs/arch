@@ -16,5 +16,5 @@ language: minimal
 
 
 script:
-  - apt-get update
+  - sudo apt-get update
   - cat /etc/hosts
