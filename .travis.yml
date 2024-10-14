@@ -9,7 +9,7 @@ jobs:
     # - arch: amd64
     
 # group: edge
-language: minimal
+language: java
 
 # go:
 # - master
