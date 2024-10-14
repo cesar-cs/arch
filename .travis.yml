@@ -1,5 +1,5 @@
 dist: jammy
-group: edge
+group: stable
 
 jobs:
   include:
