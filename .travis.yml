@@ -1,7 +1,7 @@
 ---
 dist: focal
 language: stable
-arch: arm64
+arch: ppc64le
 # arch: arm64-graviton2
 # virt: vm
 # group: edge
