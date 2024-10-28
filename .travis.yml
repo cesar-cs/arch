@@ -1,7 +1,7 @@
 ---
-dist: focal
-language: stable
-arch: amd64
+dist: bionic
+language: minimal
+# arch: amd64
 # arch: arm64-graviton2
 # virt: vm
 # group: edge
