@@ -3,9 +3,9 @@ group: stable
 
 jobs:
   include:
-    # - arch: arm64
-    - arch: ppc64le      
-    - arch: s390x
+    - arch: arm64
+    # - arch: ppc64le      
+    # - arch: s390x
     # - arch: amd64
     
 # group: edge
