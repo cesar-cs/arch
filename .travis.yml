@@ -3,13 +3,13 @@ group: stable
 
 jobs:
   include:
-    - arch: arm64
-    # - arch: ppc64le      
+    # - arch: arm64
+    - arch: ppc64le      
     # - arch: s390x
     # - arch: amd64
     
 # group: edge
-language: python
+language: c
 
 # go:
 # - master
@@ -17,10 +17,12 @@ language: python
 
 script:
   - uname -a
-  - cloud-init status --long
-  - cat /etc/cloud/cloud.cfg
-  - ls -lah /var/lib/lxd/
-  - sleep 600
+  - nproc
+  - free -h
+  # - cloud-init status --long
+  # - cat /etc/cloud/cloud.cfg
+  # - ls -lah /var/lib/lxd/
+  # - sleep 600
   # - python3 -m pip install coverage
   # - coverage --version
   # - coverage debug sys
