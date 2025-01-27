@@ -3,7 +3,7 @@ arch: amd64
 
 
 language: ruby
-ruby: 2.6.9
+ruby: 3.0.1
 
 
 script: 
