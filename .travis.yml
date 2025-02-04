@@ -1,5 +1,5 @@
 ---
-dist: bionic
+dist: jammy
 language: minimal
 # arch: amd64
 # arch: arm64-graviton2
