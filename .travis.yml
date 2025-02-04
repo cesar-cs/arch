@@ -1,6 +1,6 @@
 ---
 dist: jammy
-language: c
+language: java
 # arch: amd64
 # arch: arm64-graviton2
 # virt: vm
