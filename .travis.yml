@@ -1,5 +1,5 @@
 ---
-dist: jammy
+dist: focal
 language: java
 # arch: amd64
 # arch: arm64-graviton2
