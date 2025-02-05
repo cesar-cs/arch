@@ -2,7 +2,7 @@ os: linux
 dist: focal
 
 language: php
-jdk: openjdk17
+# jdk: openjdk17
 php: 7.4
 
 script:
