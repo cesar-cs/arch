@@ -1,24 +1,8 @@
 os: linux
 dist: focal
 
+language: php
+jdk: openjdk17
+
 script:
-  - python -V
-  - apt list --installed
-  - dpkg -l
-  - uname -a
-  - python -V
-  - apt list --installed
-  - dpkg -l
-  - uname -a
-  - python -V
-  - apt list --installed
-  - dpkg -l
-  - uname -a
-  - python -V
-  - apt list --installed
-  - dpkg -l
-  - uname -a
-
-
-
-
+  - java -version
