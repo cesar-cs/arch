@@ -1,27 +1,25 @@
 os: linux
-
-group: edge
-
-script:
-  - ls -la $HOME
-  - ls -lah /etc/cloud/cloud.cfg.d/
-  - cat /etc/cloud/cloud.cfg
-  - cat /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
-  - cat /etc/hosts
-  - cloud-init status --long
-  
-
-
-language: java
-# python:
-#   - "3.8"
+arch: ppc64le
+dist: bionic
 
 jobs:
   include:
-    - arch: ppc64le
-      dist: jammy
-    # - arch: ppc64le
-    #   dist: focal
-    # xenial will be deprecated in future
-    # - arch: ppc64le
-    #   dist: xenial
+    - name: "Power Build 1"
+      script:
+        - echo "Starting Test Job 1 on PPC64LE"
+        - sleep 10
+        - echo "This is test job 1"
+        - echo "Test Job 1 completed"
+
+    - name: "Power Build 2"
+      script:
+        - echo "Starting Test Job 2 on PPC64LE"
+        - sleep 15
+        - echo "This is test job 2"
+        - echo "Test Job 2 completed"
+
+before_install:
+  - uname -a
+  - lscpu
+
+install: skip
